@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sentiment Analysis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .center {
+            margin: auto ;
+            width: 60%;
+            border: 2px solid black;
+            padding: 100px;
+            font-size: large;
+            line-height: 1.8;
+        }
+        .myButton:hover {
+            background-color: grey;
+        }
+        .myButton{
+            padding: 7px 24px;
+            border: 1px;
+        }
+        .Positive{
+            color: green;
+        }
+        .Neutral{
+            color: orange;
+        }
+        .Negative{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">SENTIMENT ANALYSIS</h1>
+    <br><br>
+    <div class="center">
+        
+        <form action="{{ url_for('predict') }}" method="POST">
+            <center>
+            <table>
+            <tr> 
+                <td>Enter Review</td><td>:</td> 
+                <td><input class="input" id="i" type="text" name="r" ></td>
+                <td><center><input type="submit" id="result" class="myButton" value="Predict"></center></td>
+            </tr>
+            <tr>
+                <td>Prediction</td><td>:</td>
+                <td><center><span class ="{{ Result }}" >{{ Result }} </span></center></td>
+                <td></td>
+            </tr>
+            </table>
+            </center>
+    </div>
+    </body>
+</html>
