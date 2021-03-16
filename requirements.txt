@@ -12,3 +12,4 @@ pandas>=0.19
 requests==2.24.0
 configparser==5.0.0
 textblob==0.15.3
+nltk
